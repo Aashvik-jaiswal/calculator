@@ -12,7 +12,8 @@ class calculator
         System.out.println("press the serial no. in side the barckets '()' to enter your choice");
         System.out.println("(1)simple calculator");
         System.out.println("(2)compound calculator");
-        System.out.println("(3) exit!!");
+        System.out.println("(3)geometrical calculator");
+        System.out.println("(4)exit !!!");
         
         int choice = 0;
         choice = sc.nextInt();
@@ -180,7 +181,83 @@ class calculator
                    }
                    break;
                    
-            case 3:
+                   
+            case 3: 
+                   //geometrical calculator
+                   System.out.println("welcome to the geometrical calculator");
+                   System.out.println("functions avalaible are as follows :");
+                   System.out.println("to execute any function enter the seial no. inside the respective fucntion's breacket '()' to enter your choice");
+                   System.out.println("(1)area of a rectangle");
+                   System.out.println("(2)area of a square");
+                   System.out.println("(3)area of a circle");
+                   System.out.println("(4)perimeter of a rectangle");
+                   System.out.println("(5)perimeter of a square");
+                   System.out.println("(6)circumference of a circle");
+                   
+                   int input1 = 0;
+                   input1 = sc.nextInt();
+                   
+                   switch(input1)
+                   {
+                       case 1:
+                              //area of a rectangle
+                              double length = 0.0d, breadth = 0.0d;
+                              System.out.println("enter the length of the rectangle in metre");
+                              length =  sc.nextDouble();
+                              System.out.println("enter the breadth of the rectangle in metre");
+                              breadth = sc.nextDouble();
+                              System.out.println("the area of the rectangle is " + (length * breadth));
+                              break;
+                              
+                       case 2:
+                              //area of the aquare
+                              double side = 0.0d;
+                              System.out.println("enter the measurement side of the square in metre");
+                              side =  sc.nextDouble();
+                              
+                              System.out.println("the area of the square is " + (side*side));
+                              break;
+                              
+                       case 3:
+                              //area of the circle
+                              double radius = 0.0d;
+                              System.out.println("enter the measurement of the radius of the circle in metre");
+                              radius =  sc.nextDouble();
+                              
+                              System.out.println("the area of the circle is " + (3.14 * radius * radius));
+                              break;
+                              
+                       case 4:
+                              //perimeter of the rectangle
+                              System.out.println("enter the length of the rectangle in metre");
+                              length = sc.nextDouble();
+                              System.out.println("enter the breasth of the rectangle in metre");
+                              breadth = sc.nextDouble();
+                              
+                              System.out.println("the area of the square is " + (2*(length + breadth)));
+                              break;
+                              
+                       case 5:
+                              //perimeter of the square 
+                              System.out.println("enter the measurement of the side of the square in metre");
+                              side = sc.nextDouble();
+                              
+                              System.out.println("the perimeter of the square is " + (4*side));
+                              break;
+                              
+                       case 6:
+                              //circumference of the circle
+                              System.out.println("enter the measurement of the radius of the circle in metre");
+                              radius = sc.nextDouble();
+                              
+                              System.out.println("the circumference of the square is " + (2 * 3.14 * radius));
+                              break;
+                              
+                       default:
+                               System.out.println("enter a valid choice");
+                   }
+                   break;
+            case 4:
                    //exit
                    System.exit(0);
                    break;
